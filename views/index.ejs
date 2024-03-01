@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/stylesheets/main.css">
+    <title>Trym Løkkeberg</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="profile">
+                <img src="/imgs/profilepic.jpeg" alt="Profile Picture">
+                <a href="/">Trym Løkkeberg</a>
+            </div>
+            <div class="links">
+                <ul>
+                    <li>
+                        <a href="/#about-me">About Me</a>
+                    </li>
+                    <li>
+                        <a href="/#projects">My Projects</a>
+                    </li>
+                    <li>
+                        <a href="/#experience">Experience</a>
+                    </li>
+                    <li>
+                        <div class="contact-button">
+                            <a href="/#education">Contact Me</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <div class="main-compartment">
+        <h3>Hi, my name is</h3>
+        <h1>Trym Løkkeberg</h1>
+        <div class="typewriter">
+            <h3>I am a <span id="dynamictext"></span></h3>
+        </div>
+    </div>
+
+    <div class="about-me-wrapper" id="about-me">
+        <div class="about-me">
+            <div class="about-title">
+                <h4>About Me</h4>
+            </div>
+            <p>I am 22 years old, and I come from Norway. I am currently pursuing a bachelor's degree in Computer Science at Dartmouth College. I have always had a passion for technology and programming, and has always loved experimenting with coding. When I was younger
+                I developed several simple video games, and in more recent times I have experimented with full-stack development, AI and machine learning, and iOS apps. I am very interested in the current technology trends, and right now I am very excited to see the evolution
+                of Apple's Vision Pro, and AR/VR in general, as well as the recent surge in artificial intelligence applications.</p>
+            
+            <p>
+                I am also a part of Dartmouth's varsity ice hockey team. I have played hockey since I was four years old, and it has been a huge part of my life. I love how I can be part of a team and work together with my teammates towards a common goal. I have been named captain of multiple
+                hockey teams throughout the years, and also had the honor to represent the Norwegian junior national team in a world championship.</p>
+            </p>
+            </p>
+        </div>
+    </div>
+
+    <div class="projects-wrapper" id="projects">
+        <div class="projects">
+            <h2>Projects</h2>
+
+            <div class="cards">
+                <div class="card-row">
+                    <div class="card">
+                        <img src="/imgs/Rectangle5.png" alt="Placeholder">
+                        <h4>Chess AI</h4>
+                        <p>Short explanation here.</p>
+                        <a href="/">See more</a>
+                    </div>
+                    <div class="card">
+                        <img src="/imgs/Rectangle5.png" alt="Placeholder">
+                        <h4>Sudoku Solver</h4>
+                        <p>Short explanation here.</p>
+                        <a href="/">See more</a>
+                    </div>
+                    <div class="card">
+                        <img src="/imgs/Rectangle5.png" alt="Placeholder">
+                        <h4>Tiny Search Engine</h4>
+                        <p>Short explanation here.</p>
+                        <a href="/">See more</a>
+                    </div>
+                </div>
+                <div class="card-row">
+                    <div class="card">
+                        <img src="/imgs/Rectangle5.png" alt="Placeholder">
+                        <h4>Online Game</h4>
+                        <p>Short explanation here.</p>
+                        <a href="/">See more</a>
+                    </div>
+                    <div class="card">
+                        <img src="/imgs/Rectangle5.png" alt="Placeholder">
+                        <h4>Part of Speech Tagger</h4>
+                        <p>Short explanation here.</p>
+                        <a href="/">See more</a>
+                    </div>
+                    <div class="card">
+                        <img src="/imgs/Rectangle5.png" alt="Placeholder">
+                        <h4>Pong Game</h4>
+                        <p>Created a game in Unity and C# inspired by Dartmouth pong.</p>
+                        <a href="/">See more</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-wrapper">
+            <h2>Footer</h2>
+        </div>
+    </footer>
+</body>
+
+<script>
+    const dynamicText = document.getElementById("dynamictext");
+    const words = ["Computer science student", "Division 1 student-athlete", "Tech nerd"]
+
+    let wordIndex = 0;
+    let charIndex = 0;
+    let isDeleting = false;
+
+    const typeEffect = () => {
+        const currentWord = words[wordIndex];
+        const currentChar = currentWord.substring(0, charIndex);
+        dynamicText.textContent = currentChar;
+        dynamicText.classList.add("stop-blinking");
+
+        if (!isDeleting && charIndex < currentWord.length) {
+            charIndex++;
+            setTimeout(typeEffect, 120);
+        } else if (isDeleting && charIndex > 0) {
+            charIndex--;
+            setTimeout(typeEffect, 100);
+        } else {
+            isDeleting = !isDeleting;
+            dynamicText.classList.remove("stop-blinking");
+            wordIndex = !isDeleting ? (wordIndex + 1) % words.length : wordIndex;
+            setTimeout(typeEffect, 1200);
+        }
+    }
+
+    typeEffect();
+</script>
+</html>
