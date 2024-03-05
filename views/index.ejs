@@ -30,10 +30,15 @@
                     </li>
                     <li>
                         <div class="contact-button">
-                            <a href="/#education">Contact Me</a>
+                            <a href="/#footer">Contact Me</a>
                         </div>
                     </li>
                 </ul>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
             </div>
         </nav>
     </header>
@@ -67,44 +72,46 @@
         <div class="projects">
             <h2>Projects</h2>
 
+            <h6>Due to Dartmouth's Academic Honor Principle, I am not allowed to have public access to school project repositories on my GitHub. If you want to see the code for a specific project, please contact me and I will give you access to the private repository.</h6>
+
             <div class="cards">
                 <div class="card-row">
                     <div class="card">
-                        <img src="/imgs/Rectangle5.png" alt="Placeholder">
+                        <img src="/imgs/chess.svg" alt="Chess">
                         <h4>Chess AI</h4>
-                        <p>Short explanation here.</p>
+                        <p>Using Alpha-Beta pruning and the MiniMax algorithm, I created a simple AI opponent for chess games.</p>
                         <a href="/">See more</a>
                     </div>
                     <div class="card">
-                        <img src="/imgs/Rectangle5.png" alt="Placeholder">
+                        <img src="/imgs/sudoku.svg" alt="Sudoku">
                         <h4>Sudoku Solver</h4>
-                        <p>Short explanation here.</p>
+                        <p>Created a sudoku solver using the WalkSAT algorithm, that can solve sudoku puzzles given CNF input files.</p>
                         <a href="/">See more</a>
                     </div>
                     <div class="card">
-                        <img src="/imgs/Rectangle5.png" alt="Placeholder">
-                        <h4>Tiny Search Engine</h4>
-                        <p>Short explanation here.</p>
+                        <img src="/imgs/search.svg" alt="SearchEngine">
+                        <h4>Search Engine</h4>
+                        <p>Created a simple search engine by constructing three essential parts of a search engine: a crawler, an indexer, and a querier.</p>
                         <a href="/">See more</a>
                     </div>
                 </div>
                 <div class="card-row">
                     <div class="card">
-                        <img src="/imgs/Rectangle5.png" alt="Placeholder">
+                        <img src="/imgs/console.svg" alt="Gaming">
                         <h4>Online Game</h4>
-                        <p>Short explanation here.</p>
+                        <p>Collaborated with other programmers and made an online game where people compete to gather gold in a maze.</p>
                         <a href="/">See more</a>
                     </div>
                     <div class="card">
-                        <img src="/imgs/Rectangle5.png" alt="Placeholder">
-                        <h4>Part of Speech Tagger</h4>
-                        <p>Short explanation here.</p>
+                        <img src="/imgs/dictionary.png" alt="Dictionary">
+                        <h4>PoS Tagger</h4>
+                        <p>Code that can predict the part of speech for words in sentences using Viterbi algorithm and Hidden Markov Model.</p>
                         <a href="/">See more</a>
                     </div>
                     <div class="card">
-                        <img src="/imgs/Rectangle5.png" alt="Placeholder">
+                        <img src="/imgs/table-tennis.svg" alt="Table Tennis">
                         <h4>Pong Game</h4>
-                        <p>Created a game in Unity and C# inspired by Dartmouth pong.</p>
+                        <p>Created a game in Unity and C# inspired by "Dartmouth pong".</p>
                         <a href="/">See more</a>
                     </div>
                 </div>
@@ -112,9 +119,38 @@
         </div>
     </div>
 
+    <div class="experience-wrapper" id="experience">
+        <div class="experiences">
+            <h2>Previous Work Experience</h2>
+            
+            <div class="experience-cards">
+                <div class="cisco">
+                    <img src="/imgs/cisco.svg.png" alt="Cisco">
+                    <h5>Company: <label for="cisco">Cisco</label></h5>
+                    <h5>Position: <label for="cisco">Technical Intern</label></h5>
+                    <p>With two other interns I improved one of Cisco's video conferencing products for large meeting rooms such as classrooms and conference venues.
+                        This software was launched at the 2023 WebexOne conference in Anaheim.
+                    </p>
+                    <a href="/">See my resume for more information</a>
+                </div>
+                <div class="stensetting">
+                    <img src="/imgs/stensetting.png" alt="Stensetting">
+                    <h5>Company: <label for="stensetting">Stensetting</label></h5>
+                    <h5>Position: <label for="stensetting">Software Developer Intern</label></h5>
+                    <p>I developed a digital product database containing quantitative and qualitative information about over 200 plants in order to 
+                        increase search efficiency among the garden designers at the company.
+                    </p>
+                    <a href="/">See my resume for more information</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <footer>
-        <div class="footer-wrapper">
-            <h2>Footer</h2>
+        <div class="footer-wrapper" id="footer">
+            <a href="mailto:trym.loekkeberg.25@dartmouth.edu"><img src="/imgs/email.svg" alt="Email"></a>
+            <a href="https://www.linkedin.com/in/trym-loekkeberg-69b955246/"><img src="/imgs/linkedin.svg" alt="LinkedIn"></a>
+            <a href="https://github.com/Lokkis22"><img src="/imgs/github.svg" alt="GitHub"></a>
         </div>
     </footer>
 </body>
@@ -148,5 +184,23 @@
     }
 
     typeEffect();
+
+    // hamburger
+    const hamburger = document.querySelector(".hamburger");
+    const navMenu = document.querySelector("nav ul");
+
+    hamburger.addEventListener("click", () => {
+        hamburger.classList.toggle("active");
+        navMenu.classList.toggle("active");
+    })
+
+    document.querySelectorAll("nav li").forEach(n => n.addEventListener("click", () => {
+        hamburger.classList.remove("active");
+    }))
+
+    document.querySelectorAll("nav li").forEach(n => n.addEventListener("click", () => {
+        navMenu.classList.remove("active");
+    }))
+
 </script>
 </html>
