@@ -75,24 +75,33 @@
             <h6>Due to Dartmouth's Academic Honor Principle, I am not allowed to have public access to school project repositories on my GitHub. If you want to see the code for a specific project, please contact me and I will give you access to the private repository.</h6>
 
             <div class="cards">
+                <div class="popup" id="popup1">
+                    <div class="overlay"></div>
+                    <div class="content">
+                        <div class="close-btn" onclick="togglePopup()">&times;</div>
+                        <h4>Request Access</h4>
+                        <p>Due to Dartmouth's Honor Principle, this repository is private. If you want access, please contact me and I will give you access to the repository.</p>
+                        <a href="mailto:trym.loekkeberg.25@dartmouth.edu">Request Access</a>
+                    </div>
+                </div>
                 <div class="card-row">
                     <div class="card">
                         <img src="/imgs/chess.svg" alt="Chess">
                         <h4>Chess AI</h4>
                         <p>Using Alpha-Beta pruning and the MiniMax algorithm, I created a simple AI opponent for chess games.</p>
-                        <a href="/">See more</a>
+                        <button id="card-btn" onclick="togglePopup()">See more</button>
                     </div>
                     <div class="card">
                         <img src="/imgs/sudoku.svg" alt="Sudoku">
                         <h4>Sudoku Solver</h4>
                         <p>Created a sudoku solver using the WalkSAT algorithm, that can solve sudoku puzzles given CNF input files.</p>
-                        <a href="/">See more</a>
+                        <button id="card-btn" onclick="togglePopup()">See more</button>
                     </div>
                     <div class="card">
                         <img src="/imgs/search.svg" alt="SearchEngine">
                         <h4>Search Engine</h4>
                         <p>Created a simple search engine by constructing three essential parts of a search engine: a crawler, an indexer, and a querier.</p>
-                        <a href="/">See more</a>
+                        <button id="card-btn" onclick="togglePopup()">See more</button>
                     </div>
                 </div>
                 <div class="card-row">
@@ -100,19 +109,19 @@
                         <img src="/imgs/console.svg" alt="Gaming">
                         <h4>Online Game</h4>
                         <p>Collaborated with other programmers and made an online game where people compete to gather gold in a maze.</p>
-                        <a href="/">See more</a>
+                        <button id="card-btn" onclick="togglePopup()">See more</button>
                     </div>
                     <div class="card">
                         <img src="/imgs/dictionary.png" alt="Dictionary">
                         <h4>PoS Tagger</h4>
                         <p>Code that can predict the part of speech for words in sentences using Viterbi algorithm and Hidden Markov Model.</p>
-                        <a href="/">See more</a>
+                        <button id="card-btn" onclick="togglePopup()">See more</button>
                     </div>
                     <div class="card">
                         <img src="/imgs/table-tennis.svg" alt="Table Tennis">
                         <h4>Pong Game</h4>
                         <p>Created a game in Unity and C# inspired by "Dartmouth pong".</p>
-                        <a href="/">See more</a>
+                        <a href="https://github.com/Lokkis22/Pong.git">See more</a>
                     </div>
                 </div>
             </div>
@@ -131,7 +140,7 @@
                     <p>With two other interns I improved one of Cisco's video conferencing products for large meeting rooms such as classrooms and conference venues.
                         This software was launched at the 2023 WebexOne conference in Anaheim.
                     </p>
-                    <a href="/">See my resume for more information</a>
+                    <a href="https://www.linkedin.com/in/trym-loekkeberg-69b955246/">Go to LinkedIn for more information</a>
                 </div>
                 <div class="stensetting">
                     <img src="/imgs/stensetting.png" alt="Stensetting">
@@ -140,7 +149,7 @@
                     <p>I developed a digital product database containing quantitative and qualitative information about over 200 plants in order to 
                         increase search efficiency among the garden designers at the company.
                     </p>
-                    <a href="/">See my resume for more information</a>
+                    <a href="https://www.linkedin.com/in/trym-loekkeberg-69b955246/">Go to LinkedIn for more information</a>
                 </div>
             </div>
         </div>
@@ -201,6 +210,11 @@
     document.querySelectorAll("nav li").forEach(n => n.addEventListener("click", () => {
         navMenu.classList.remove("active");
     }))
+
+    function togglePopup() {
+        document.getElementById("popup1").classList.toggle("active");
+        console.log('toggled active');
+    }
 
 </script>
 </html>

@@ -218,6 +218,78 @@ nav ul {
     margin-bottom: 16px;
 }
 
+.popup .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background:rgba(0, 0, 0, 0.7);
+    z-index: 1;
+    display: none;
+}
+
+.popup .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    background: #FFFFFF;
+    width: 350px;
+    height: 250px;
+    z-index: 2;
+    text-align: center;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+.popup .close-btn {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    width: 30px;
+    height: 30px;
+    background: #222222;
+    color: #FFFFFF;
+    font-size: 25px;
+    font-weight: 600;
+    line-height: 30px;
+    text-align: center;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.popup.active .overlay {
+    display: block;
+}
+
+.popup.active .content {
+    transition: all 0.3s ease-in-out;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.popup h4 {
+    margin-top: 30px;
+    margin-bottom: 16px;
+}
+
+.popup a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 20px;
+    text-decoration: none;
+    width: 150px;
+    height: 40px;
+    background-color: #FC6D6D;
+    border-radius: 99px;
+    color: #FFFFFF;
+}
+
 .cards {
     display: flex;
     flex-direction: column;
@@ -258,10 +330,37 @@ nav ul {
 
 }
 
-.cards a {
+.card-row a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70px;
+    height: 20px;
+    border: 2px solid #3c3c3c;
+    border-radius: 10px;
     position: absolute;
     bottom: 10%;
     right: 10%;
+    color: #3c3c3c;
+    cursor: pointer;
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 12px;
+}
+
+#card-btn {
+    width: 70px;
+    height: 20px;
+    border: 2px solid #3c3c3c;
+    border-radius: 10px;
+    position: absolute;
+    bottom: 10%;
+    right: 10%;
+    color: #3c3c3c;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 12px;
+    background: none;
 }
 
 .experience-wrapper {
@@ -317,6 +416,14 @@ nav ul {
     margin-left: 100px;
     border: 2px solid #FC6D6D;
     border-radius: 10px;
+}
+
+.cisco a {
+    color: #000000;
+}
+
+.stensetting a {
+    color: #FC6D6D;
 }
 
 .stensetting {
