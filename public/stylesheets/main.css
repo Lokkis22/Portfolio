@@ -126,7 +126,7 @@ nav ul {
     display: flex;
     justify-content: center;
     width: 100%;
-    height: 500px;
+    /* height: 500px; */
     background-color: white;
 }
 
@@ -156,6 +156,7 @@ nav ul {
 }
 
 .about-me p {
+    padding: 16px;
     font-size: 16px;
     font-weight: 400;
     color: #3c3c3c;
@@ -177,6 +178,15 @@ nav ul {
     font-weight: 600;
     line-height: 48px;
     margin-bottom: 24px;
+}
+
+.projects h6 {
+    font-size: 12px;
+    font-weight: 400;
+    color: #FFFFFF;
+    inline-size: 800px;
+    text-align: center;
+    margin-bottom: 16px;
 }
 
 .cards {
@@ -201,7 +211,6 @@ nav ul {
     justify-content: space-between;
     width: 690px;
     margin-bottom: 30px;
-
 }
 
 .cards img {
@@ -226,6 +235,78 @@ nav ul {
     right: 10%;
 }
 
+.experience-wrapper {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    background-color: #FFFFFF;
+    height: 800px;
+}
+
+.experiences {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.experience-cards img {
+    margin-bottom: 16px;
+}
+
+.experience-cards label {
+    font-weight: 400;
+}
+
+.experience-cards h5 {
+    font-size: 16px;
+    margin-bottom: 12px;
+}
+
+.experience-cards p {
+    font-size: 14px;
+    line-height: 24px;
+    color: #3c3c3c;
+}
+
+.experience-cards a {
+    position: absolute;
+    bottom: 5%;
+}
+
+.experience-cards {
+    display: flex;
+    width: 1000px;
+    position: relative;
+    margin-top: 50px;
+}
+
+.cisco {
+    padding: 16px;
+    width: 500px;
+    height: 300px;
+    margin-left: 100px;
+    border: 2px solid #FC6D6D;
+    border-radius: 10px;
+}
+
+.stensetting {
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    position: absolute;
+    right: 10%;
+    margin-top: 250px;
+    width: 500px;
+    height: 300px;
+    border: 2px solid #3c3c3c;
+    border-radius: 10px;
+}
+
+.stensetting p {
+    text-align: right;
+}
 
 
 /* footer */
@@ -239,4 +320,116 @@ footer {
     height: 80px;
     border-top: 1px solid #878181;
     background-color: #3c3c3c;
+}
+
+/* dynamic */
+@media screen and (max-width: 800px) {
+    .main-compartment h1 {
+        font-size: 50px;
+        margin-bottom: 24px;
+    }
+
+    .typewriter h3 {
+        font-size: 1rem;
+    }
+
+    .about-me p {
+        padding: 16px;
+        font-size: 12px;
+        font-weight: 400;
+        color: #3c3c3c;
+        line-height: 24px;
+        text-align: left;
+        margin-bottom: 16px;
+    }
+
+    .projects h2 {
+        color: #FFFFFF;
+        font-size: 36px;
+        font-weight: 600;
+        line-height: 48px;
+        margin-bottom: 24px;
+    }
+
+    .projects h6 {
+        inline-size: 50%;
+        padding-left: 16px;
+        padding-right: 16px;
+        font-size: 12px;
+        font-weight: 400;
+        color: #FFFFFF;
+        text-align: left;
+        margin-bottom: 16px;
+    }
+
+    .card-row {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 690px;
+        margin-bottom: 30px;
+    }
+
+    .card {
+        margin-bottom: 30px;
+    }
+
+    .experience-wrapper {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        background-color: #FFFFFF;
+        height: 800px;
+    }
+    
+    .experiences {
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 50px;
+        /* border-style: dashed;
+        border-color: black; */
+    }
+
+    .experience-cards {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: static;
+        width: 100%;
+        height: 700px;
+    }
+    
+    .cisco {
+        position: static;
+        margin-left: 0;
+        padding: 16px;
+        width: 350px;
+        height: 300px;
+        border: 2px solid #FC6D6D;
+        border-radius: 10px;
+    }
+    
+    .stensetting {
+        position: static;
+        padding: 16px;
+        display: flex;
+        margin-top: 16px;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 350px;
+        height: 300px;
+        border: 2px solid #3c3c3c;
+        border-radius: 10px;
+    }
+    
+    .stensetting p {
+        text-align: left;
+    }
+
+    .experience-cards a {
+        display: none;
+    }
+
 }
