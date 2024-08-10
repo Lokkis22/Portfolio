@@ -370,7 +370,7 @@ nav ul {
     justify-content: center;
     width: 100%;
     background-color: #FFFFFF;
-    height: 800px;
+    height: 1000px;
 }
 
 .experiences {
@@ -411,7 +411,7 @@ nav ul {
     margin-top: 50px;
 }
 
-.cisco {
+.tgs {
     padding: 16px;
     width: 500px;
     height: 300px;
@@ -420,15 +420,12 @@ nav ul {
     border-radius: 10px;
 }
 
-.cisco a {
-    color: #000000;
+.tgs img {
+    width: 60px;
+    height: 60px;
 }
 
-.stensetting a {
-    color: #FC6D6D;
-}
-
-.stensetting {
+.cisco {
     padding: 16px;
     display: flex;
     flex-direction: column;
@@ -442,8 +439,20 @@ nav ul {
     border-radius: 10px;
 }
 
-.stensetting p {
+.cisco p {
     text-align: right;
+}
+
+.stensetting {
+    padding: 16px;
+    width: 500px;
+    position: absolute;
+    left: 0;
+    top: 500px;
+    height: 300px;
+    margin-left: 100px;
+    border: 2px solid #FC6D6D;
+    border-radius: 10px;
 }
 
 
@@ -570,7 +579,7 @@ footer h3 {
         justify-content: center;
         width: 100%;
         background-color: #FFFFFF;
-        height: 800px;
+        height:  1100px;
     }
     
     .experiences {
@@ -587,20 +596,21 @@ footer h3 {
         align-items: center;
         position: static;
         width: 100%;
-        height: 700px;
+        /* height: 700px; */
     }
     
-    .cisco {
+    .stensetting {
         position: static;
         margin-left: 0;
         padding: 16px;
+        margin-top: 16px;
         width: 350px;
         height: 300px;
         border: 2px solid #FC6D6D;
         border-radius: 10px;
     }
     
-    .stensetting {
+    .cisco {
         position: static;
         padding: 16px;
         display: flex;
@@ -612,8 +622,19 @@ footer h3 {
         border: 2px solid #3c3c3c;
         border-radius: 10px;
     }
+
+    .tgs {
+        position: static;
+        margin-left: 0;
+        padding: 16px;
+        width: 350px;
+        height: 300px;
+        border: 2px solid #FC6D6D;
+        border-radius: 10px;
+    }
+
     
-    .stensetting p {
+    .cisco p {
         text-align: left;
     }
 
